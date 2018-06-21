@@ -278,3 +278,10 @@ nav h1 a {
 img, embed, object, video {
   max-width: 100%;
 }
+.restaurants-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+@media screen

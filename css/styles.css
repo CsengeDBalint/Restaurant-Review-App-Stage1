@@ -273,3 +273,8 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== Responsiveness ====================== */
+img, embed, object, video {
+  max-width: 100%;
+}

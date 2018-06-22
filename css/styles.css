@@ -278,13 +278,26 @@ nav h1 a {
 img, embed, object, video {
   max-width: 100%;
 }
-.restaurants-container{
+#restaurants-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center; 
 }
 .filter-options {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
-@media screen
+.filter-options h2 {
+  align-self: flex-start;
+}
+.filter-options select {
+  align-self: flex-end;
+}
+#restaurants-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

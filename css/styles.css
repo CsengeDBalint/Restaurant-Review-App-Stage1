@@ -11,7 +11,7 @@ body {
 	background-color: #fdfdfd;
 	margin: 0;
   position:relative;
-  max-width: 90em;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -50,10 +50,14 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
+  max-width: 1400px;
   /*height: 80px;*/
   background-color: #252831;
   text-align:center;
@@ -69,12 +73,13 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px 40px 0px;*/
     list-style: none;
     background-color: #eee;
     font-size: 1.5rem;
     margin: 0;
-    max-width: 100%;
+    /*max-width: 100%;*/
+    max-width: 1400px;
 }
 
 /* Display list items side by side */
@@ -148,8 +153,8 @@ nav h1 a {
   min-height: 380px;
   padding: 0 0 25px;
   text-align: left;
-  min-width:17rem;
-  max-width:17rem;
+  min-width:17em;
+  max-width:17em;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -194,15 +199,15 @@ nav h1 a {
 }
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
+  height: 90%;
+  position: absolute;
   right: 0;
   top: 80px;
   width: 50%;
@@ -220,7 +225,7 @@ nav h1 a {
 #restaurant-name {
   color: #000;
   font-family: Arial,sans-serif;
-  font-size: 20pt;
+  font-size: 1.5rem;
   font-weight: 200;
   letter-spacing: 0;
   margin: 15px 0 30px;
@@ -231,13 +236,13 @@ nav h1 a {
 	width: 90%;
 }
 #restaurant-address {
-  font-size: 12pt;
+  font-size: 1rem;
   margin: 10px 0px;
 }
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
-  font-size: 12pt;
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 20px;
@@ -249,7 +254,8 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 100px 40px 30px;
+  min-width: 17em;
   width: 50%;
 }
 #reviews-container {
@@ -257,7 +263,7 @@ nav h1 a {
 }
 #reviews-container h2 {
   color: #582d2dc7;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
@@ -315,62 +321,73 @@ img, embed, object, video {
   flex-wrap: wrap;
 }
 .filter-options h2 {
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
-
 #restaurants-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-#restaurants-list li{
-
-}
-@media screen and (max-width: 23em) {
-  /*BUG:h2 látszódik*/
-  /* For mobile phones: */
-  /*.filter-options {
-    height: 50px;
-    align-items: center;
-  }*/
-  .filter-options select {    
+}  
+@media screen and (max-width: 30.81em) {
+  nav h1 a {
     font-size: 1rem;
-    height: 2rem;
-    width: 8rem;
+  }
+  #restaurant-name,#reviews-container h2 {
+    font-size: 1.2rem;
   }
   .filter-options h2 {
     display: none;
   }
-@media screen and (min-width: 23.01em) and (max-width: 38em) {
-  /*BUG:h2 látszódik*/
-  .filter-options select {
-    font-size: 0.9rem;
+  .inside #map-container {
+    position: relative;
+    height: 20em;
+    width: 100%;
+  }
+  #restaurant-container{
+    min-width: 17em;
+    width: 90%;
+    order: 2;
+    flex-wrap: wrap;
+  }
+  #reviews-container{
+    min-width: 17em;
+    width: 90%;
+    order:3;
+  } 
+}
+@media screen and (min-width: 38.82em) and (max-width: 55em) {
+  .filter-options select {    
+    font-size: 1rem;
     height: 2rem;
-    width: 10rem;
   }
-  .filter-options h2 {
-    display: inline;
+  .inside #map-container {
+    position: relative;
+    height: 20em;
+    width: 100%;
   }
-  @media screen and (min-width: 38.01em) and (max-width: 68.75em) {
+  #restaurant-container{
+    min-width: 17em;
+    width: 90%;
+    order: 2;
+    flex-wrap: wrap;
+  }
+  #reviews-container{
+    min-width: 17em;
+    width: 90%;
+    order:3;
+  } 
+}
+@media screen and (min-width: 55.01em){
     .filter-options h2 {
       display: inline;
     }
-    /*BUG:sima row, nem flex-end*/
-    #neighborhoods-select, #cuisines-select {
-      align-self: flex-end;
-    }
-    /*BUG:átlóg a térképre*/
     #reviews-list li {
       padding: 0px;
-      width: 80%;
+      width: 90%;
     }
-    @media screen and (min-width: 68.76em) {
-      /*BUG:sima row, nem flex-end*/
-      #neighborhoods-select, #cuisines-select {
-        align-self: flex-end;
-      }
-      #reviews-list li {
-        width: 90%;
-      }
+    #footer {
+      padding: 0px;
+    }
 }

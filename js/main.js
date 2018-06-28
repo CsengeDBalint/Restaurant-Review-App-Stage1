@@ -200,6 +200,24 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
+
+  /**
+   * Register the service worker
+   */
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/cache-sw.js', {scope:'/'})
+    .then(function(registration) {
+      // Registration was successful
+      console.log('Service Worker registered', registration.scope);
+    })
+    .catch(function(err) {
+      // Registration failed
+      console.log('Service Worker registration failed: ', err);
+    });
+  }
+
+
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map

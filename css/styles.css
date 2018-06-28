@@ -43,7 +43,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 }
 #footer {
-  background-color: #888;
+  background-color: #dcdcdc;
   color: #3f3f3f;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -110,7 +110,7 @@ nav h1 a {
 #map {
   height: 400px;
   width: 100%;
-  background-color: #ccc;
+  background-color: #fdfdfd;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
@@ -214,7 +214,7 @@ nav h1 a {
   width: 50%;
 }
 .inside #map {
-  background-color: #aaa;
+  background-color: #fdfdfd;
   height: 100%;
   width: 100%;
 }
@@ -330,7 +330,8 @@ img, embed, object, video {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}  
+}
+/* ====================== Media Breakpoints ====================== */
 @media screen and (max-width: 30.81em) {
   nav h1 a {
     font-size: 1rem;

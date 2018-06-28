@@ -24,16 +24,16 @@
     </nav>
   </header>
   <main id="maincontent">
-    <section id="map-container" tabindex="-1">
+    <section id="map-container" tabindex="-1" aria-label="map containing restaurants">
       <div id="map" aria-label="map-aria-description" role="application"></div>
     </section>
     <section id="restaurants-container">
-      <div class="filter-options" aria-label="Searching options">
+      <div class="filter-options" aria-label="Searching options" role="form">
         <h2>Filter Results</h2>
-        <select aria-label="filter by neighborhood" role="combobox" aria-current= "All Neighborhoods " id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" aria-label="filter by neighborhood" role="listbox" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select aria-label="filter by cuisine" role="combobox" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" name="cuisines" aria-label="filter by cuisine" role="listbox" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>

@@ -33,10 +33,13 @@ No pull requests please.
 1. Fork or download the project's repository.
 
 2. Navigate your terminal into the new directory and start a local server.
-   e.g.:  Python with the command (Python2) `python -m SimpleHTTPServer 8000` - if port 8000 is already in use than choose another one.                                   (Python 3.x) `python3 -m http.server 8000`
-  You can download the current version on the [Python's website](https://www.python.org/downloads/).
+   For this project Python was recommended.
+   You can start Python with the command (Python2) `python -m SimpleHTTPServer 8000` - if port 8000 is already in use than choose          another port.(Python 3.x) `python3 -m http.server 8000`
+   You can download the current version of the program on [Python's website](https://www.python.org/downloads/).
 
 3. If your local server is running, go to the site http://localhost.8000 in your favorite browser.
+
+4. Have fun finding your favorite restaurant:wine_glass::fork_and_knife:
 
  
 

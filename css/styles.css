@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-
+html, body {
+  overflow-x: hidden;
+}
 body,td,th,p{
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
